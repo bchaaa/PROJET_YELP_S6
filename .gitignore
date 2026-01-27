@@ -1,0 +1,15 @@
+# Ignorer les données
+data/
+*.csv
+*.json
+
+# Ignorer les fichiers temporaires
+__pycache__/
+*.ipynb_checkpoints/
+.DS_Store
+.env
+
+# Ignorer les modèles lourds
+models/*.pt
+models/*.pkl
+models/*.bin
