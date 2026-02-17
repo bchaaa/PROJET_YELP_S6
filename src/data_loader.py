@@ -2,7 +2,7 @@ import warnings
 # 1. On bloque les warnings pour tout le projet ici (c'est "caché" dans l'import)
 warnings.filterwarnings('ignore')
 
-import os
+import os 
 # 2. On coupe les logs verbeux de TensorFlow/Transformers (DeepSeek)
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
