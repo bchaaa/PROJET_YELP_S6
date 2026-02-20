@@ -1,6 +1,13 @@
+import warnings
+# 1. On bloque les warnings pour tout le projet ici (c'est "caché" dans l'import)
+warnings.filterwarnings('ignore')
+
+import os 
+# 2. On coupe les logs verbeux de TensorFlow/Transformers (DeepSeek)
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 import pandas as pd
 import json
-import os
 
 def load_yelp_sample(filepath, n_rows=10000):
     # Charge les n premieres lignes du fichier json
@@ -81,12 +88,12 @@ if __name__ == "__main__":
             df = load_yelp_sample(full_path, n_rows=100)
             
             if df is not None and not df.empty:
-                print("   ✅ Chargement réussi.")
-                print(f"   📏 Taille : {df.shape}")
+                print("    Chargement réussi.")
+                print(f"    Taille : {df.shape}")
                 # Affiche les 5 premières colonnes dispo pour vérifier le contenu
                 cols = list(df.columns[:5])
-                print(f"   👀 Colonnes (extrait) : {cols}")
+                print(f"    Colonnes (extrait) : {cols}")
             else:
-                print("   ❌ Échec ou fichier vide.")
+                print("    Échec ou fichier vide.")
             
             print("-" * 50)
