@@ -1,13 +1,26 @@
+# --- Base & Data Science ---
 pandas
 numpy
-matplotlib
+scipy          
 seaborn
+
+# --- Machine Learning & NLP Classique ---
 scikit-learn
 nltk
 spacy
+
+# --- Deep Learning ---
 torch
+
+# --- Modèles de Langage (HuggingFace) ---
 transformers
 sentence-transformers
+
+# --- IA Agentique & Générative ---
 langchain
+langchain-core  
+pydantic       
+
+# --- Outils Jupyter ---
 jupyter
 ipykernel
